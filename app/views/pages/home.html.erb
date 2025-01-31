@@ -1,0 +1,13 @@
+<div class="feed">
+  <h1>Derniers Articles</h1>
+  <% if @posts.exists? %>
+    <%= @posts.each do |post| %>
+      <div>
+        <h2><%= post.title %></h2>
+        <p><%= post.content %></p>
+      </div>
+    <% end %>
+  <% else %>
+    <p>Aucun article n'a été publié pour le moment.</p>
+  <% end %>
+</div>

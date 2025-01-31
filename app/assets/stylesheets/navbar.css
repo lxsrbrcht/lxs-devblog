@@ -1,0 +1,22 @@
+.navbar {
+  width: 100vw;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #52796f;
+  border-bottom: 1px solid #222222;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.navbar-title {
+  margin-left: 20px;
+  font-size: 1.5em;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.navbar-title:hover {
+  color: #2c2c2c;
+}

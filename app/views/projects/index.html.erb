@@ -1,0 +1,13 @@
+<div class="feed">
+  <% if @projects.exists? %>
+    <h1>Derniers Projets</h1>
+    <% @projects.each do |project| %>
+      <div>
+        <h2><%= project.title %></h2>
+        <p><%= project.description %></p>
+      </div>
+    <% end %>
+  <% else %>
+  <p>Aucun projet n'a été publié pour le moment.</p>
+  <% end %>
+</div>
