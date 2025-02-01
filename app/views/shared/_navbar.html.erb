@@ -4,7 +4,11 @@
     <%= link_to "Projets", projects_path, class: "navbar-item" %>
   </div>
   <div class="navbar-login">
-    <%= link_to "Login", user_session_path %>
-    <%= link_to "Manage", pages_manage_path	 %>
+    <% if user_signed_in? %>
+      <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+      <%= link_to "Manage", pages_manage_path	 %>
+    <% else %>
+      <%= link_to "Login", user_session_path %>
+    <% end %>
   </div>
 </div>
