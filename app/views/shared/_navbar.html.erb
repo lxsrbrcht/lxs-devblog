@@ -1,14 +1,30 @@
 <div class="navbar">
   <%= link_to "LXS.devblog", root_path, class: "navbar-title" %>
   <div class="navbar-menu">
-    <%= link_to "Projets", projects_path, class: "navbar-item" %>
+    <div class="dropdown">
+      <span>
+        <%= link_to "Projets", projects_path, class: "navbar-item" %>
+          </span>
+            <div class="dropdown-content">
+              <% @projects.each do |project| %>
+                <%= link_to project.name, project_path(project), class:"login-button" %>
+              <% end %>
+            </div>
+    </div>
   </div>
   <div class="navbar-login">
     <% if user_signed_in? %>
-      <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-      <%= link_to "Manage", pages_manage_path	 %>
+      <div class="dropdown">
+        <span>Mouse over me</span>
+        <div class="dropdown-content">
+          <%= button_to "Logout", destroy_user_session_path, class:"login-button", method: :delete %>
+          <%= button_to "Manage", pages_manage_path, class:"login-button" %>
+        </div>
+      </div>
     <% else %>
       <%= link_to "Login", user_session_path %>
     <% end %>
+
+
   </div>
 </div>

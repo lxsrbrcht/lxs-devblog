@@ -17,3 +17,7 @@
  @import 'pages';
  @import 'projects';
  @import 'navbar';
+
+body {
+  margin: 0px;
+}
