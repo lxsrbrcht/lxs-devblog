@@ -3,11 +3,12 @@
       <h2>Projets</h2>
       <% if @projects.exists? %>
         <% @projects.each do |project| %>
-          <div class="project-card">
-            <h3><%= project.name %></h3>
-            <%= image_tag "#{project.logo}" %>
-            <%= button_to "Delete", project_path(project), class:"manage-button", method: :delete %>
-          </div>
+          <%= link_to project do  %>
+            <div class="project-card">
+              <h3><%= project.name %></h3>
+              <%= image_tag "#{project.logo}" %>
+            </div>
+          <% end %>
         <% end %>
       <% else %>
         <p>Aucun projet n'a été publié pour le moment.</p>
