@@ -1,6 +1,7 @@
 <div class="feed">
   <h1>Manage</h1>
-  <%= button_to "Add Project", new_project_path, class:"manage-button" %>
+  <%= link_to "Add Project", new_project_path, class:"manage-button" %>
+  <%= link_to "New Post", new_post_path, class:"manage-button" %>
     <div class="manage-projects-showcase">
       <h2>Projets</h2>
       <% if @projects.exists? %>
