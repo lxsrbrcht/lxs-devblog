@@ -1,2 +1,7 @@
-<h1>Posts#new</h1>
-<p>Find me in app/views/posts/new.html.erb</p>
+<div class="feed">
+  <%= simple_form_for(@new_post) do |f| %>
+    <%= f.input :title %>
+    <%= f.input :body, as: :text %>
+    <%= f.submit %>
+  <% end %>
+</div>
