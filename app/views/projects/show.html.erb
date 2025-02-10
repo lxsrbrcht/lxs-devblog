@@ -1,0 +1,21 @@
+<div class="feed">
+  <%= @project.name %>
+  <% if @posts.exists? %>
+    <% @posts.each do |post| %>
+      <%= link_to post , class: 'container-link', block: true do %>
+        <div class="post-card">
+          <div class="post-title">
+            <%= post.title %>
+          </div>
+          <div class="post-date">
+            <%= time_ago_in_words post.created_at %>
+          </div>
+          <%= post.body %>
+        </div>
+      <% end %>
+    <% end %>
+  <% else %>
+    <p>Aucun post n'a été publié pour le moment.</p>
+  <% end %>
+
+</div>

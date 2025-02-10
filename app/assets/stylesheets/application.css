@@ -13,5 +13,11 @@
  *= require_tree .
  *= require_self
  */
+ @import 'buttons';
  @import 'pages';
-@import 'navbar';
+ @import 'projects';
+ @import 'navbar';
+
+body {
+  margin: 0px;
+}

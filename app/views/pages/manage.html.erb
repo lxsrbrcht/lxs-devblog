@@ -1,1 +1,19 @@
-<%= link_to "Add Project", new_project_path %>
+<div class="feed">
+  <h1>Manage</h1>
+  <%= link_to "Add Project", new_project_path, class:"manage-button" %>
+  <%= link_to "New Post", new_post_path, class:"manage-button" %>
+    <div class="manage-projects-showcase">
+      <h2>Projets</h2>
+      <% if @projects.exists? %>
+        <% @projects.each do |project| %>
+          <div class="manage-project-card">
+            <h3><%= project.name %></h3>
+            <%= image_tag "#{project.logo}" %>
+            <%= button_to "Delete", project_path(project), class:"manage-button", method: :delete %>
+          </div>
+        <% end %>
+      <% else %>
+        <p>Aucun projet n'a été publié pour le moment.</p>
+      <% end %>
+    </div>
+</div>

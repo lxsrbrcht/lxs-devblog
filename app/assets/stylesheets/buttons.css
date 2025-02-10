@@ -1,0 +1,35 @@
+.manage-button {
+  background-color:#678d4b;
+  border: 1px solid white;
+  color: white;
+  font-weight:600;
+  padding: 8px 12px;
+  border-radius: 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.manage-button:hover {
+  background-color: white;
+  color: #678d4b;
+  box-shadow: #678d4b 0px 0px 12px;
+}
+
+.login-button {
+  background-color:#678d4b;
+  border: 1px solid white;
+  color: white;
+  width: 80px;
+  font-weight:600;
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
