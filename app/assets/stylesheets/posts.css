@@ -25,4 +25,5 @@
   display: block;
   text-decoration: none;
   color: black;
+  object-fit: contain;
 }
