@@ -1,7 +1,3 @@
 <div class="feed">
-  <%= simple_form_for(@new_post) do |f| %>
-    <%= f.input :title %>
-    <%= f.input :body, as: :text %>
-    <%= f.submit %>
-  <% end %>
+  <%= render 'posts/form', post: @new_post %>
 </div>

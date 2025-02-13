@@ -32,6 +32,11 @@ gem "devise"
 # Simplifies form building [
 gem "simple_form"
 
+# Generate fake date for testing [
+gem "faker"
+
+gem "bootstrap", "~> 5.2.3"
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
