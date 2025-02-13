@@ -1,0 +1,8 @@
+<%= simple_form_for post, html: { data: { controller: "editor" } } do |f| %>
+  <%= f.input :title %>
+  <div id="post-content" data-editor-target="post_content">
+
+
+  </div>
+  <%= f.button :submit %>
+<% end %>
